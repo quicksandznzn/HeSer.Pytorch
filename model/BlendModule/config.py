@@ -6,7 +6,7 @@ class Params:
     def __init__(self):
        
         self.name = 'Blender'
-        self.pretrain_path = 'checkpoint/Blender/025-00000000.pth'
+        self.pretrain_path = None
         self.size = 512
 
         self.train_root = 'dataset/process/img'
@@ -28,11 +28,12 @@ class Params:
         self.output_image_size = 512
         self.dis_num_blocks = 7
 
-        self.per_model = 'pretrained_models/vgg19-d01eb7cb.pth'
+        # self.per_model = 'pretrained_models/vgg19-d01eb7cb.pth'
+        self.per_model = None
         
         # loss
         self.rec_loss = True 
-        self.per_loss = True 
+        self.per_loss = False
         self.lambda_gan = 0.2
         self.lambda_rec = 1.0
         self.lambda_per = 0.0005

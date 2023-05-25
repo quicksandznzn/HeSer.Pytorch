@@ -3,3 +3,5 @@ pretrained_model*
 checkpoint*
 *__pycache__*
 dataset
+*.onnx
+*.pt
