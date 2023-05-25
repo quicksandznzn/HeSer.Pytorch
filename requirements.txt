@@ -5,4 +5,3 @@ imgaug
 yt-dlp
 imageio[pyav]
 imageio[ffmpeg]
-==1.6.0
