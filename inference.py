@@ -114,16 +114,12 @@ class Infer:
             arg.eval()
 
 if __name__ == "__main__":
-    model = Infer('checkpoint/Aligner/417-00000000.pth',
-                'checkpoint/Blender/073-00000000.pth',
-                'pretrained_models/parsing.pth')
+    model = Infer('checkpoint/Aligner/002-00000000.pth',
+                  'checkpoint/Aligner/002-00000000.pth',
+                  'pretrained_models/face_parsing.pth')
 
-    src_path_list = ['dataset/select-align/img/id00061/2XrRfyv-EmE-0001/2122.png',
-                    'dataset/select-align/img/id00061/2XrRfyv-EmE-0001/2125.png',
-                    'dataset/select-align/img/id00061/2XrRfyv-EmE-0001/2130.png',
-                    'dataset/select-align/img/id00061/2XrRfyv-EmE-0001/2135.png',
-                    'dataset/select-align/img/id00061/2XrRfyv-EmE-0001/2140.png']
-    tgt_path = 'dataset/select-align/img/id00061/4kSyBHethpE-0002/2055.png'
+    src_path_list = ['dataset/test/case/source_1']
+    tgt_path = 'dataset/test/img.png'
     oup = model.run(tgt_path,src_path_list)
 
     cv2.imwrite('2.png',oup)
