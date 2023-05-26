@@ -41,6 +41,7 @@ class AlignData(DatasetBase):
         # source root
         root = kwargs['root']
         self.paths = [os.path.join(root,f) for f in os.listdir(root)]
+        print(self.paths)
         # dis = math.floor(len(self.paths)/self.count)
         # self.paths = self.paths[self.id*dis:(self.id+1)*dis]
         self.length = len(self.paths)
