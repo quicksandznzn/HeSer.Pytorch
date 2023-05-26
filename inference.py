@@ -118,8 +118,8 @@ if __name__ == "__main__":
                   'checkpoint/Aligner/002-00000000.pth',
                   'pretrained_models/face_parsing.pth')
 
-    src_path_list = ['dataset/test/case/source_1']
-    tgt_path = 'dataset/test/img.png'
+    src_path_list = ['example/test/case/source_1']
+    tgt_path = 'example/test/img.png'
     oup = model.run(tgt_path,src_path_list)
 
     cv2.imwrite('2.png',oup)
